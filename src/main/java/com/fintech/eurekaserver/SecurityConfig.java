@@ -20,9 +20,9 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
-//                .authorizeHttpRequests(authz -> authz
-//                        .anyRequest()
-//                        .authenticated())
+                .authorizeHttpRequests(authz -> authz
+                        .anyRequest()
+                        .authenticated())
                 .httpBasic(withDefaults())
                 .build();
 
